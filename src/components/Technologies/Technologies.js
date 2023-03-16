@@ -19,7 +19,7 @@ const Technologies = () =>  (
           <ListTitle>Front-End</ListTitle>
           <ListParagraph>
             Experience with: <br />
-            React.js, React.ts, <br />Framer-Motion, Animista
+            React.js, React.ts, <br />Framer-Motion, Animista, Material UI
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -29,7 +29,7 @@ const Technologies = () =>  (
           <ListTitle>Back-End</ListTitle>
           <ListParagraph>
             Experience with: <br />
-            Node.JS, Node.TS, Express, <br /> JWT, AuthO
+            Node.JS, Typescript, Express, <br /> JWT, AuthO
           </ListParagraph>
         </ListContainer>
       </ListItem>

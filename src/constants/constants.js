@@ -1,40 +1,30 @@
 export const projects = [
   {
-    title: 'Food Services App',
-    description: "This project was built to solve food ordering problems. The web-based application gives clients a plethora of options when seeking cooked food products and services.",
-    image: '/images/1.png',
-    tags: ['Node.JS', 'Express.JS', 'Javascript', 'React', 'SQLite'],
-    visit: 'https://foodorderring.netlify.app/',
+    title: 'I-Learn Application',
+    description: "This is a full-stack web application that connects users (students) to a network of experts in various fields, enables them to buy courses, and enables teachers to offer their services. The app also offers users (students) the chance to set up a one-on-one mentoring relationship with the course's creators (tutors) by checking the tutor's availability and making an appointment.",
+    image: '/images/0.png',
+    tags: ['PostgreSQL, Sequelize ORM, Node.JS, React.JS, Express.JS, Typescript, CSS, AWS, Render, Github, Postman, Swagger, and CI/CD.'],
+    visit: 'https://ilearn-sq012-node.netlify.app',
     id: 0,
   },
   {
-    title: 'StarWars Application ',
-    description:"A single-page application (SPA) that displays all characters from the Star Wars movie built with vanilla JavaScript, HTML5, and CSS3.",
-    image: '/images/2.png',
-    tags: ['HTML5', 'CSS3', 'JavaScript.'],
-    visit: 'https://kosy-starwars.netlify.app',
+    title: 'Food Ordering App',
+    description: 'The purpose of this full-stack web application was to address issues with food ordering. The web-based application offers customers a wide range of choices when looking for cooked food products and services.',
+    image: '/images/1.png',
+    tags: ['JavaScript, NodeJS, Express Framework, Typescript, React, SQLite'],
+    visit: 'https://foodorderring.netlify.app',
     id: 1,
+  },
+  {
+    title: 'Refine Dashboard',
+    description: 'This is a full-stack MERN application using two resources - properties and agents(users) with complete CRUD functionalities, authentication, pagination, sorting, filtering.',
+    image: '/images/2.png',
+    tags: ['React.ts (with the Refine framework),Material UI, Express, Node.js, and MongoDB'],
+    visit: 'https://kosy-yariga-dashboard.netlify.app',
+    id: 2,
   }
 ]
-//   {
-//     title: 'WebRTC App',
-//     description: "This is a code repository for the corresponding YouTube video. In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.",
-//       image: '/images/3.jpg',
-//       tags: ['React', 'WebRTC'],
-//     source: 'https://google.com',
-//     visit: 'https://google.com',
-//     id: 2,
-//   },
-//   {
-//     title: 'Unichat',
-//     description: "This is a code repository for the corresponding video tutorial. In this video, we will create a full Realtime Chat Application",
-//     image: '/images/4.jpg',
-//     tags: ['React', 'ChatEngine', 'Firebase'],
-//     source: 'https://google.com',
-//     visit: 'https://google.com',
-//     id: 3,
-//   },
-// ];
+
 
 export const TimeLineData = [
   { year: 2020, text: 'Started my Journey, learnt HTML and CSS', },
