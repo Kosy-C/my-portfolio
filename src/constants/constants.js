@@ -22,6 +22,14 @@ export const projects = [
     tags: ['React.ts (with the Refine framework),Material UI, Express, Node.js, and MongoDB'],
     visit: 'https://kosy-yariga-dashboard.netlify.app',
     id: 2,
+  },
+  {
+    title: 'Ecommerce Store',
+    description: 'This is a full-stack ecommerce application where users can browse through items to purchase them. The application includes classic ecommerce features like adding items to cart and accepting payment options using stripe.',
+    image: '/images/4.png',
+    tags: ['Sass, Material UI, React, Redux toolkit, Strapi, Stripe, MySql'],
+    visit: 'https://ecommerce-app-kosystore-iuv7.vercel.app/',
+    id: 3,
   }
 ]
 
