@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 import { SocialIcons } from '../Header/HeaderStyles';
 import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
@@ -9,18 +9,21 @@ const Footer = () => {
    <FooterWrapper>
     <LinkList>
       <LinkColumn>
-        <LinkTitle>Call</LinkTitle>
-        <LinkItem href="tel:+234-810-123-0595">+234-810-123-0595</LinkItem>
+        <LinkTitle> Call </LinkTitle>
+        <LinkItem href="tel:+234-810-123-0595"> +234-810-123-0595 </LinkItem>
       </LinkColumn>
+
       <LinkColumn>
         <LinkTitle>Email</LinkTitle>
-        <LinkItem href="mailto:kosychinweuba@gmail.com">kosychinweuba@gmail.com</LinkItem>
+        <LinkItem href="mailto:kosychinweuba@gmail.com"> kosychinweuba@gmail.com </LinkItem>
       </LinkColumn>
     </LinkList>
+
     <SocialIconsContainer>
       <CompanyContainer>
-        <Slogan>Empowering Progress Through Technology <br /> #Women in Tech</Slogan>
+        <Slogan> Empowering Progress Through Technology <br /> #Women in Tech </Slogan>
       </CompanyContainer>
+
       <SocialContainer>
         <SocialIcons href="https://github.com">
           <AiFillGithub size="3rem" />
@@ -28,14 +31,9 @@ const Footer = () => {
         <SocialIcons href="https://linkedIn.com">
           <AiFillLinkedin size="3rem" />
         </SocialIcons>
-        <SocialIcons href="https://instagram.com">
-          <AiFillInstagram size="3rem" />
-        </SocialIcons>
-        <SocialIcons href="https://twitter.com">
-          <AiFillTwitterCircle size="3rem" />
-        </SocialIcons>
       </SocialContainer>
     </SocialIconsContainer>
+
    </FooterWrapper>
   );
 };

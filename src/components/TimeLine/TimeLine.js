@@ -1,8 +1,23 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 
-import { CarouselButton, CarouselButtonDot, CarouselButtons, CarouselContainer, CarouselItem, CarouselItemImg, CarouselItemText, CarouselItemTitle, CarouselMobileScrollNode } from './TimeLineStyles';
-import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { TimeLineData } from '../../constants/constants';
+import {
+  CarouselButton,
+  CarouselButtonDot,
+  CarouselButtons,
+  CarouselContainer,
+  CarouselItem,
+  CarouselItemImg,
+  CarouselItemText,
+  CarouselItemTitle,
+  CarouselMobileScrollNode,
+} from "./TimeLineStyles";
+import {
+  Section,
+  SectionDivider,
+  SectionText,
+  SectionTitle,
+} from "../../styles/GlobalComponents";
+import { TimeLineData } from "../../constants/constants";
 
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
@@ -11,61 +26,82 @@ const Timeline = () => {
   const carouselRef = useRef();
 
   const scroll = (node, left) => {
-    return node.scrollTo({ left, behavior: 'smooth' });
-  }
+    return node.scrollTo({ left, behavior: "smooth" });
+  };
 
   const handleClick = (e, i) => {
     e.preventDefault();
 
     if (carouselRef.current) {
-      const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length));
-      
+      const scrollLeft = Math.floor(
+        carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length)
+      );
+
       scroll(carouselRef.current, scrollLeft);
     }
-  }
+  };
 
   const handleScroll = () => {
     if (carouselRef.current) {
-      const index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * TimeLineData.length);
+      const index = Math.round(
+        (carouselRef.current.scrollLeft /
+          (carouselRef.current.scrollWidth * 0.7)) *
+          TimeLineData.length
+      );
 
       setActiveItem(index);
     }
-  }
+  };
 
   // snap back to beginning of scroll when window is resized
   // avoids a bug where content is covered up if coming from smaller screen
   useEffect(() => {
     const handleResize = () => {
       scroll(carouselRef.current, 0);
-    }
+    };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
   }, []);
 
   return (
     <Section id="about">
-      <SectionTitle>About Me</SectionTitle>
+      <SectionTitle> About Me </SectionTitle>
+
       <SectionText>
-        I am a Node.js software developer with a passion for writing clean, efficient, and scalable code. I have extensive experience with Node.js and its various modules and packages, as well as a deep understanding of the JavaScript language. I am skilled in developing and integrating APIs, building and maintaining back-end systems, and delivering robust, user-friendly web applications. I am a self-starter who is always eager to learn new technologies and apply them to real-world problems. I am also familiar with agile software development methodologies, and I have a proven track record of delivering projects on time and within budget. My strong attention to detail and commitment to delivering high-quality results make me an asset to any development team. I am also a team player with excellent communication and collaboration skills, allowing me to effectively work with colleagues, stakeholders, and clients to achieve project goals and deliver value.
+        I am a passionate and skilled software developer, driven by the goal of
+        crafting clean, efficient, and scalable code. My expertise lies in API
+        development, back-end systems, and creating user-friendly web
+        applications. I have a proven track record of delivering projects on
+        time and within budget, following agile methodologies. With a keen eye
+        for detail and a proactive approach to learning, I continuously adapt to
+        new technologies and apply them to real-world challenges. As a team
+        player with excellent communication and collaboration skills, I work
+        harmoniously with colleagues, and clients to achieve project goals and
+        deliver high-quality results.
       </SectionText>
+      
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
           {TimeLineData.map((item, index) => (
-            <CarouselMobileScrollNode key={index} final={index === TOTAL_CAROUSEL_COUNT - 1}>
+            <CarouselMobileScrollNode
+              key={index}
+              final={index === TOTAL_CAROUSEL_COUNT - 1}
+            >
               <CarouselItem
                 index={index}
                 id={`carousel__item-${index}`}
                 active={activeItem}
                 onClick={(e) => handleClick(e, index)}
               >
-              <CarouselItemTitle>
-                {item.year}
-                <CarouselItemImg
+                <CarouselItemTitle>
+                  {item.year}
+                  <CarouselItemImg
                     width="208"
                     height="6"
                     viewBox="0 0 208 6"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
@@ -80,7 +116,8 @@ const Timeline = () => {
                         y1="0.5"
                         x2="208"
                         y2="0.500295"
-                        gradientUnits="userSpaceOnUse">
+                        gradientUnits="userSpaceOnUse"
+                      >
                         <stop stop-color="white" />
                         <stop
                           offset="0.79478"
@@ -90,8 +127,8 @@ const Timeline = () => {
                       </linearGradient>
                     </defs>
                   </CarouselItemImg>
-              </CarouselItemTitle>
-              <CarouselItemText>{item.text}</CarouselItemText>
+                </CarouselItemTitle>
+                <CarouselItemText>{item.text}</CarouselItemText>
               </CarouselItem>
             </CarouselMobileScrollNode>
           ))}
@@ -99,7 +136,7 @@ const Timeline = () => {
       </CarouselContainer>
       <CarouselButtons>
         {TimeLineData.map((item, index) => (
-          <CarouselButton 
+          <CarouselButton
             key={index}
             index={index}
             active={activeItem}

@@ -9,13 +9,15 @@ const Hero = (props) => (
   <LeftSection>
     <SectionTitle main center>
       Hello 👋 <br />
-     I am Kosy Chinweuba, <br />
-     a Full-Stack Software/Product Developer
+      I am Kosy Chinweuba, <br />
+      a Full-Stack Software/Product Developer
     </SectionTitle>
+
     <SectionText>
-      As a Software Developer with practical experience designing, creating, and implementing solutions using a variety of technologies and programming languages, I enjoy learning about and utilizing new technologies. In my spare time, I like reading, researching, going to the movies, and taking photos to preserve special moments.
+      As a Software Developer with practical experience designing, creating, and implementing solutions using a variety of technologies and programming languages, I enjoy building scalable and robust web applications. I love the Art of Solving Problems. I am a Design Thinker.
     </SectionText>
-    <Button onClick={()=> window.location="https://LinkedIn.com"}>Learn More</Button>
+
+    <Button onClick={()=> window.location="https://LinkedIn.com"}> Learn More </Button>
   </LeftSection>
   </Section>
 );
